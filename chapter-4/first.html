@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(event) {
+            function uicomponent() {
+                var button = document.getElementById("btnclick");
+                button.addEventListener("click", () => {
+                    this.handleclick();
+                })
+            }
+
+            uicomponent.prototype.handleclick = function() {
+                console.log("this is from prototype");
+            }
+
+
+            var b = new uicomponent();
+        });
+    </script>
+</head>
+
+<body>
+    <input id="btnclick" type="button" value="click me" />
+</body>
+
+</html>
